@@ -14,8 +14,30 @@
       <div class="nav-bar"></div>
 
       <h1>{{ intro }}</h1>
+
+      <h1>{{ name }}</h1>
+
+      <h1 v-for= 'person in listenavne' :key='person.navn'>{{ person.navn }} - {{ person.alder }}</h1>
       
+      <input v-model="name" type="text" placeholder="Enter your name" />
+
+      <h1 v-for="(item, index) in liste" :key="index">{{ item }}</h1>
+
+      <div v-for="(item, index) in liste" :key="index" v-show="!skjul">
+        <h1 v-if="item <= 3" class="alert">{{ item }}</h1>
+        <h1 v-else class="normal">{{ item }}</h1>
+      </div>
+
+      <div>
+        <input v-model="nr" placeholder="indtast tal"/>
+        <br>
+        <button @click="add">tilføj tal</button>
+        <button @click="skjulliste">Skjul liste</button>
+      </div>
+
     </div>
+
+    
 
     <!-- Import App -->
     <script src="./js/main.js"></script>
