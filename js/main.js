@@ -10,7 +10,7 @@ const app = Vue.createApp({
             listenavne: [
                 {navn: 'Søren', alder: 36},
                 {navn: 'Christian', alder: 23},
-                {navn: 'Rasmus', alder: 26}
+                {navn: 'Rasmus', alder: 27}
             ]
         }
     },
