@@ -3,6 +3,7 @@ const app = Vue.createApp({
         return {
             intro: 'Welcome to my Vue template',
             name: 'Søren',
+            age: 36,
             liste: [1,2,3,4,5],
             nr: 0,
             skjul: false,
@@ -14,8 +15,8 @@ const app = Vue.createApp({
         }
     },
     methods: {
-        myMethod(){
-
+        TilføjPerson() {
+            this.listenavne.push({navn: this.name, alder: this.age});
         },
         add() {
             this.liste.push(this.nr);

@@ -18,8 +18,10 @@
       <h1>{{ name }}</h1>
 
       <h1 v-for= 'person in listenavne' :key='person.navn'>{{ person.navn }} - {{ person.alder }}</h1>
-      
-      <input v-model="name" type="text" placeholder="Enter your name" />
+
+      <input v-model="name" placeholder="Enter your name" />
+      <input v-model="age" placeholder="Enter your age" />
+      <button @click="TilføjPerson">Tilføj Person</button>
 
       <h1 v-for="(item, index) in liste" :key="index">{{ item }}</h1>
 
